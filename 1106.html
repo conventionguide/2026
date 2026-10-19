@@ -1,0 +1,137 @@
+<title>오늘의 메뉴 선택</title>
+<style>
+:root{--bg:#F2F3F5;--dark:#101114;--panel:#FFFFFF;--line:#D9DCE2;--text:#101114;--muted:#686D78;--blue:#2457D6;--pale:#C9D6F8;--radius:20px}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans KR",sans-serif;letter-spacing:-.025em}.wrap{width:min(920px,calc(100% - 40px));margin:auto}.survey-wrap{width:min(720px,calc(100% - 32px));margin:auto}header{height:62px;border-bottom:1px solid #2B2D33;background:var(--dark);color:#F2F3F5;position:sticky;top:0;z-index:10}.nav{height:100%;display:flex;align-items:center;justify-content:space-between;gap:16px}.brand{font-size:11px;letter-spacing:.17em;font-weight:850;text-decoration:none;color:#F2F3F5}.brand em{font-style:normal;background:#2457D6;color:#FFFFFF;padding:3px 5px;margin-left:4px}.nav span{font-size:11px;letter-spacing:.12em;color:#F2F3F5}.hero{padding:38px 0 30px;background:var(--dark);color:#F2F3F5}.headline{font-size:clamp(32px,7vw,48px);line-height:1.15;letter-spacing:-.06em;margin:0 0 12px;font-weight:850}.sub{color:#C9D6F8;font-size:14px;line-height:1.65;margin:0}.date-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:22px}.pill{font-size:12px;padding:8px 11px;border:1px solid #343842;border-radius:99px;color:#C9D6F8;background:#181A20}.pill strong{color:#FFF;font-weight:650}main{padding:0 0 60px;background:var(--bg);min-height:60vh}.card{margin-top:28px;padding:24px;border:1px solid var(--line);background:#FFF;border-radius:var(--radius);box-shadow:0 12px 32px #1011140a}.question-block{margin-top:24px}.question-block:first-child{margin-top:0}.question-label{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:10px}.section-title{font-size:17px;font-weight:750}.required,.optional{font-size:11px;color:#686D78;border:1px solid var(--line);padding:5px 8px;border-radius:99px;white-space:nowrap}.input{width:100%;min-width:0;background:#FFF;border:1px solid var(--line);border-radius:12px;padding:14px 13px;color:var(--text);font:inherit;font-size:14px;outline:none}.input:focus{border-color:var(--blue);box-shadow:0 0 0 3px #4f80ff22}.choice-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.lunch-choice-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.choice{position:relative;display:block;cursor:pointer}.choice input{position:absolute;opacity:0;pointer-events:none}.choicebox{min-height:70px;padding:14px;border:1px solid var(--line);border-radius:14px;background:#FFF;display:flex;align-items:center;justify-content:center;text-align:center;transition:.15s}.choicebox strong{font-size:13px;line-height:1.45;font-weight:700}.choice input:checked+.choicebox{border-color:var(--blue);background:var(--pale);box-shadow:inset 0 0 0 1px var(--blue)}.menu-grid{display:grid;grid-template-columns:1fr;gap:10px}.coffee-menu-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.coffee-menu-grid .choicebox{min-height:70px;padding:12px 8px;justify-content:center;text-align:center}.coffee-menu-grid .choicebox strong{min-width:0;text-align:center;font-size:13px}.menu-grid .choicebox{min-height:76px;padding:14px 16px;flex-direction:row;gap:12px;border-radius:14px;justify-content:flex-start}.menu-grid .choicebox strong{font-size:13px;overflow-wrap:anywhere;min-width:76px;text-align:left}.menu-grid .choicebox small{font-size:11px;line-height:1.5;color:var(--muted);overflow-wrap:anywhere;text-align:left}.menu-grid .choicebox .category{font-size:10px;font-weight:750;color:var(--blue);background:#EEF2FF;border-radius:5px;padding:3px 6px;flex-shrink:0}.extras{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:9px}.extra{position:relative;display:flex;align-items:center;justify-content:center;text-align:center;min-height:54px;padding:12px 8px;border:1px solid var(--line);border-radius:12px;background:#FFF;font-size:13px;font-weight:650;cursor:pointer}.extra input{position:absolute;opacity:0;pointer-events:none}.extra:has(input:checked){border-color:var(--blue);background:var(--pale);box-shadow:inset 0 0 0 1px var(--blue)}.hidden{display:none!important}.submit{margin-top:30px;width:100%;border:0;border-radius:13px;padding:16px;background:var(--blue);color:#fff;font:inherit;font-weight:800;font-size:15px;cursor:pointer}.submit:hover{background:#1D49BA}.toast{display:none;margin-top:12px;padding:12px;border:1px solid #b9d7c2;background:#eef8f0;color:#245d3b;border-radius:12px;font-size:13px;line-height:1.5}.section-intro{font-size:12px;color:var(--muted);margin:-5px 0 14px;line-height:1.5}.divider{height:1px;background:#E7E9EE;margin:28px 0 0}.section-top{display:flex;align-items:center;gap:10px;margin-bottom:20px}.question-block .question-block{margin-top:22px}.question-notice{margin:0 0 12px;font-size:11px;line-height:1.5;color:var(--muted)}.section-top+.question-label{margin-top:0}.divider{margin:24px 0 0}.section-top h2{font-size:20px;letter-spacing:-.04em;margin:0}.name-title{font-size:20px;font-weight:750;letter-spacing:-.04em}.section-top .tag{font-size:10px;letter-spacing:.12em;font-weight:800;color:var(--blue);background:#EEF2FF;border-radius:6px;padding:5px 7px}
+@media(max-width:480px){.hero{padding-top:28px}.card{padding:18px}.nav{height:62px}.brand{font-size:11px}.nav span{font-size:10px}.headline{font-size:35px}.menu-grid{gap:8px}.coffee-menu-grid{gap:7px}.coffee-menu-grid .choicebox{min-height:64px;padding:10px 5px}.coffee-menu-grid .choicebox strong{font-size:13px;overflow-wrap:anywhere}.menu-grid .choicebox{min-height:70px;padding:12px 10px;gap:8px}.menu-grid .choicebox strong{font-size:13px;min-width:62px}.menu-grid .choicebox small{font-size:10px;line-height:1.4}.section-top h2{font-size:18px}.lunch-choice-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:7px}.lunch-choice-grid .choicebox{padding:10px 6px;min-height:72px}.lunch-choice-grid .choicebox strong{font-size:13px}}
+</style></head>
+<body>
+<header><div class="wrap nav"><a class="brand" href="#top">CONVENTION <em>GUIDE</em></a><span>HANGZHOU · 2026</span></div></header>
+<section class="hero" id="top"><div class="wrap">
+  <h1 class="headline">오늘의 메뉴 선택</h1>
+  <p class="sub">이름을 입력하고, 원하는 식사와 음료를 선택해 주세요.</p>
+  <div class="date-row"><div class="pill">조사 날짜 <strong>날짜 입력 예정</strong></div><div class="pill">응답 마감 <strong>마감 시간 입력 예정</strong></div></div>
+</div></section>
+<main class="survey-wrap">
+<form class="card" id="surveyForm">
+  <div class="question-block">
+    <div class="question-label"><div class="name-title">이름</div><span class="required">필수</span></div>
+    <input class="input" id="person" name="person" placeholder="이름을 입력해 주세요" autocomplete="name" required>
+  </div>
+
+  <div class="divider"></div>
+  <section class="question-block" id="lunchSection">
+    <div class="section-top"><span class="tag">LUNCH</span><h2>점심 식사</h2></div>
+    <div class="question-label"><div class="section-title">식사 여부</div><span class="required">필수</span></div>
+    <div class="choice-grid lunch-choice-grid">
+      <label class="choice"><input type="radio" name="lunchParticipation" value="식사할게요" required><span class="choicebox"><strong>식사할게요</strong></span></label>
+      <label class="choice"><input type="radio" name="lunchParticipation" value="간식 먹을게요" required><span class="choicebox"><strong>간식 먹을게요</strong></span></label>
+      <label class="choice"><input type="radio" name="lunchParticipation" value="이번엔 패스할게요" required><span class="choicebox"><strong>이번엔 패스할게요</strong></span></label>
+    </div>
+    <div id="lunchDetails">
+    <div class="question-block"><div class="question-label"><div class="section-title">메뉴</div><span class="optional">선택</span></div>
+      <p class="question-notice">※ 메뉴는 당일 상황에 따라 변경될 수 있습니다.</p>
+      <div class="menu-grid">
+        <label class="choice"><input type="radio" name="lunchMenu" value="한식"><span class="choicebox"><small class="category">식사</small><strong>한식</strong><small>백반 · 찌개 · 정식</small></span></label>
+        <label class="choice"><input type="radio" name="lunchMenu" value="일식"><span class="choicebox"><small class="category">식사</small><strong>일식</strong><small>돈카츠 · 초밥 · 덮밥</small></span></label>
+        <label class="choice"><input type="radio" name="lunchMenu" value="간식"><span class="choicebox"><small class="category">간식</small><strong>간식 메뉴</strong><small>간단한 먹거리</small></span></label>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+  <section class="question-block" id="dinnerSection">
+    <div class="section-top"><span class="tag">DINNER</span><h2>저녁 식사</h2></div>
+    <div class="question-label"><div class="section-title">식사 여부</div><span class="required">필수</span></div>
+    <div class="choice-grid">
+      <label class="choice"><input type="radio" name="dinnerParticipation" value="식사할게요" required><span class="choicebox"><strong>식사할게요</strong></span></label>
+      <label class="choice"><input type="radio" name="dinnerParticipation" value="이번엔 패스할게요" required><span class="choicebox"><strong>이번엔 패스할게요</strong></span></label>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+  <section class="question-block" id="coffeeSection">
+    <div class="section-top"><span class="tag">COFFEE</span><h2>커피</h2></div>
+    <div class="question-label"><div class="section-title">커피 신청</div><span class="required">필수</span></div>
+    <div class="choice-grid">
+      <label class="choice"><input type="radio" name="coffeeParticipation" value="신청할게요" required><span class="choicebox"><strong>신청할게요</strong></span></label>
+      <label class="choice"><input type="radio" name="coffeeParticipation" value="이번엔 패스할게요" required><span class="choicebox"><strong>이번엔 패스할게요</strong></span></label>
+    </div>
+    <div id="coffeeDetails">
+      <div class="question-block"><div class="question-label"><div class="section-title">메뉴</div><span class="optional">선택</span></div>
+        <p class="question-notice">※ 메뉴는 당일 상황에 따라 변경될 수 있습니다.</p>
+        <div class="coffee-menu-grid">
+          <label class="choice"><input type="radio" name="coffeeMenu" value="아메리카노"><span class="choicebox"><strong>아메리카노</strong></span></label>
+          <label class="choice"><input type="radio" name="coffeeMenu" value="카페라떼"><span class="choicebox"><strong>카페라떼</strong></span></label>
+          <label class="choice"><input type="radio" name="coffeeMenu" value="바닐라라떼"><span class="choicebox"><strong>바닐라라떼</strong></span></label>
+        </div>
+      </div>
+      <div class="question-block"><div class="question-label"><div class="section-title">온도</div><span class="optional">선택</span></div>
+        <div class="choice-grid">
+          <label class="choice"><input type="radio" name="coffeeTemp" value="아이스"><span class="choicebox"><strong>아이스</strong></span></label>
+          <label class="choice"><input type="radio" name="coffeeTemp" value="핫"><span class="choicebox"><strong>핫</strong></span></label>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <button class="submit" type="submit">응답 제출하기 <span aria-hidden="true">→</span></button>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</form>
+</main>
+<script>
+const $=id=>document.getElementById(id);
+function toggleDetails(groupName, noValue, detailsId, extraSelectors=[]){
+  document.querySelectorAll(`input[name="${groupName}"]`).forEach(el=>el.addEventListener('change',()=>{
+    const skip=el.checked&&el.value===noValue;
+    $(detailsId).classList.toggle('hidden',skip);
+    if(skip) extraSelectors.forEach(sel=>document.querySelectorAll(sel).forEach(x=>{x.checked=false;}));
+  }));
+}
+toggleDetails('lunchParticipation','이번엔 패스할게요','lunchDetails',['input[name="lunchMenu"]']);
+toggleDetails('coffeeParticipation','이번엔 패스할게요','coffeeDetails',['input[name="coffeeMenu"]','input[name="coffeeTemp"]']);
+const SCRIPT_URL = 'https://script.google.com/macros/s/testtest/exec';
+$('surveyForm').addEventListener('submit', async e => {
+  e.preventDefault();
+  const toast = $('toast');
+  if (SCRIPT_URL === 'PASTE_YOUR_APPS_SCRIPT_WEB_APP_URL_HERE') {
+    toast.textContent = '아직 Google Apps Script 주소가 연결되지 않았습니다. 배포 URL을 HTML 코드에 입력해 주세요.';
+    toast.style.display = 'block';
+    toast.scrollIntoView({behavior:'smooth', block:'nearest'});
+    return;
+  }
+  const value = name => document.querySelector(`input[name="${name}"]:checked`)?.value || '';
+  const payload = {
+    submittedAt: new Date().toISOString(),
+    person: $('person').value.trim(),
+    lunchParticipation: value('lunchParticipation'),
+    lunchMenu: value('lunchMenu'),
+    dinnerParticipation: value('dinnerParticipation'),
+    coffeeParticipation: value('coffeeParticipation'),
+    coffeeMenu: value('coffeeMenu'),
+    coffeeTemp: value('coffeeTemp'),
+    page: location.href
+  };
+  const submitButton = document.querySelector('.submit');
+  submitButton.disabled = true;
+  submitButton.textContent = '제출 중…';
+  try {
+    await fetch(SCRIPT_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: {'Content-Type': 'text/plain;charset=utf-8'},
+      body: JSON.stringify(payload)
+    });
+    toast.textContent = '응답 전송을 요청했습니다. 중복 제출은 피해주세요.';
+    toast.style.display = 'block';
+    toast.scrollIntoView({behavior:'smooth', block:'nearest'});
+    submitButton.textContent = '제출 완료';
+  } catch (err) {
+    toast.textContent = '전송에 실패했습니다. 인터넷 연결을 확인한 뒤 다시 시도해 주세요.';
+    toast.style.display = 'block';
+    submitButton.disabled = false;
+    submitButton.textContent = '응답 제출하기 →';
+  }
+});
+</script>
+</body></html>
