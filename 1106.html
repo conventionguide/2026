@@ -122,12 +122,12 @@ $('surveyForm').addEventListener('submit', async e => {
       headers: {'Content-Type': 'text/plain;charset=utf-8'},
       body: JSON.stringify(payload)
     });
-    toast.textContent = '응답 전송을 요청했습니다. 중복 제출은 피해주세요.';
+    toast.textContent = '제출이 완료되었습니다!';
     toast.style.display = 'block';
     toast.scrollIntoView({behavior:'smooth', block:'nearest'});
     submitButton.textContent = '제출 완료';
   } catch (err) {
-    toast.textContent = '전송에 실패했습니다. 인터넷 연결을 확인한 뒤 다시 시도해 주세요.';
+    toast.textContent = '제출에 실패했습니다. 인터넷 연결을 확인한 뒤 다시 시도해 주세요.';
     toast.style.display = 'block';
     submitButton.disabled = false;
     submitButton.textContent = '응답 제출하기 →';
