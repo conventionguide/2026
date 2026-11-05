@@ -25,25 +25,67 @@
   </div>
 
   <div class="divider"></div>
-  <section class="question-block" id="lunchSection">
-    <div class="section-top"><span class="tag">LUNCH</span><h2>점심 식사</h2></div>
-    <div class="question-label"><div class="section-title">식사 여부</div><span class="required">필수</span></div>
-    <div class="choice-grid lunch-choice-grid">
-      <label class="choice"><input type="radio" name="lunchParticipation" value="식사할게요" required><span class="choicebox"><strong>식사할게요</strong></span></label>
-      <label class="choice"><input type="radio" name="lunchParticipation" value="간식 먹을게요" required><span class="choicebox"><strong>간식 먹을게요</strong></span></label>
-      <label class="choice"><input type="radio" name="lunchParticipation" value="이번엔 패스할게요" required><span class="choicebox"><strong>이번엔 패스할게요</strong></span></label>
-    </div>
-    <div id="lunchDetails">
-    <div class="question-block"><div class="question-label"><div class="section-title">메뉴</div><span class="optional">선택</span></div>
-      <p class="question-notice">※ 인원 미달 또는 현지 식당 상황에 따라 다른 메뉴로 대체될 수 있습니다.</p>
+
+<section class="question-block" id="lunchSection">
+  <div class="section-top">
+    <span class="tag">LUNCH</span>
+    <h2>오늘의 만두</h2>
+  </div>
+
+  <div class="question-label">
+    <div class="section-title">양 선택</div>
+    <span class="required">필수</span>
+  </div>
+
+  <div class="choice-grid">
+    <label class="choice">
+      <input type="radio" name="lunchParticipation" value="보통이요" required>
+      <span class="choicebox"><strong>보통이요</strong></span>
+    </label>
+
+    <label class="choice">
+      <input type="radio" name="lunchParticipation" value="양 많이요" required>
+      <span class="choicebox"><strong>양 많이요</strong></span>
+    </label>
+  </div>
+
+  <div id="lunchDetails">
+    <div class="question-block">
+      <div class="question-label">
+        <div class="section-title">메뉴</div>
+        <span class="optional">선택</span>
+      </div>
+
+      <p class="question-notice">
+        ※ 인원 미달 또는 현지 식당 상황에 따라 다른 메뉴로 대체될 수 있습니다.
+      </p>
+
       <div class="menu-grid">
-        <label class="choice"><input type="radio" name="lunchMenu" value="식사1"><span class="choicebox"><small class="category">식사</small><strong>비빔밥</strong><small>백반 · 찌개 · 정식</small></span></label>
-        <label class="choice"><input type="radio" name="lunchMenu" value="식사2"><span class="choicebox"><small class="category">식사</small><strong>김밥</strong><small>돈카츠 · 초밥 · 덮밥</small></span></label>
-        <label class="choice"><input type="radio" name="lunchMenu" value="간식"><span class="choicebox"><small class="category">간식</small><strong>간식 메뉴</strong><small>간단한 먹거리</small></span></label>
+        <label class="choice">
+          <input type="radio" name="lunchMenu" value="마라 좋아요!">
+          <span class="choicebox">
+            <strong>마라 좋아요!</strong>
+          </span>
+        </label>
+
+        <label class="choice">
+          <input type="radio" name="lunchMenu" value="매운 거 좋아요!">
+          <span class="choicebox">
+            <strong>매운 거 좋아요!</strong>
+          </span>
+        </label>
+
+        <label class="choice">
+          <input type="radio" name="lunchMenu" value="기본이 좋아요!">
+          <span class="choicebox">
+            <strong>기본이 좋아요!</strong>
+          </span>
+        </label>
       </div>
     </div>
-    </div>
-  </section>
+  </div>
+</section>
+
 
   <div class="divider"></div>
   <section class="question-block" id="dinnerSection">
