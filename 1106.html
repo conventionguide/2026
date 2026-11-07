@@ -91,32 +91,38 @@
         <p class="question-notice">※ 인원 미달 또는 현지 식당 상황에 따라 다른 메뉴로 대체될 수 있습니다.</p>
         <div class="coffee-menu-grid">
   
-<div class="menu-grid">
 
-  <label class="choice">
+<div class="menu-grid" style="display:grid; grid-template-columns:minmax(0,1fr); width:100%;">
+
+  <label class="choice" style="width:100%;">
     <input type="radio" name="coffeeMenu" value="음료1">
-    <span class="choicebox">
-      <strong>크리스프 그레이프</strong>
-      <small>포도+자스민 그린티+치즈폼</small>
+    <span class="choicebox" style="width:100%; display:flex; align-items:center; justify-content:flex-start; gap:12px;">
+      <strong style="min-width:110px; flex-shrink:0;">크리스프 그레이프</strong>
+      <small style="min-width:0; flex:1; overflow-wrap:break-word;">
+        포도 + 자스민 그린티 + 치즈폼
+      </small>
     </span>
   </label>
 
-  <label class="choice">
+  <label class="choice" style="width:100%;">
     <input type="radio" name="coffeeMenu" value="음료2">
-    <span class="choicebox">
-      <strong>레드 구아바</strong>
-      <small>레드 구아바+자스민 티+밀크+구아바폼</small>
+    <span class="choicebox" style="width:100%; display:flex; align-items:center; justify-content:flex-start; gap:12px;">
+      <strong style="min-width:110px; flex-shrink:0;">레드 구아바</strong>
+      <small style="min-width:0; flex:1; overflow-wrap:break-word;">
+        레드 구아바 + 자스민 티 + 우유 + 구아바폼
+      </small>
     </span>
   </label>
 
-  <label class="choice">
+  <label class="choice" style="width:100%;">
     <input type="radio" name="coffeeMenu" value="음료3">
-    <span class="choicebox">
-      <strong>아메리카노</strong>
+    <span class="choicebox" style="width:100%; display:flex; align-items:center; justify-content:flex-start; gap:12px;">
+      <strong style="min-width:110px; flex-shrink:0;">아메리카노</strong>
     </span>
   </label>
 
 </div>
+
 
       </div>
       <div class="question-block"><div class="question-label"><div class="section-title">온도</div><span class="optional">선택</span></div>
