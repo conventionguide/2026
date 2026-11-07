@@ -36,11 +36,35 @@
     <div id="lunchDetails">
     <div class="question-block"><div class="question-label"><div class="section-title">메뉴</div><span class="optional">선택</span></div>
       <p class="question-notice">※ 인원 미달 또는 현지 식당 상황에 따라 다른 메뉴로 대체될 수 있습니다.</p>
-      <div class="menu-grid">
-        <label class="choice"><input type="radio" name="lunchMenu" value="식사1"><span class="choicebox"><small class="category">식사</small><strong>비빔밥</strong><small>백반 · 찌개 · 정식</small></span></label>
-        <label class="choice"><input type="radio" name="lunchMenu" value="식사2"><span class="choicebox"><small class="category">식사</small><strong>김밥</strong><small>돈카츠 · 초밥 · 덮밥</small></span></label>
-        <label class="choice"><input type="radio" name="lunchMenu" value="간식"><span class="choicebox"><small class="category">간식</small><strong>간식 메뉴</strong><small>간단한 먹거리</small></span></label>
-      </div>
+
+<div class="menu-grid" style="grid-template-columns:repeat(3,minmax(0,1fr));">
+
+  <label class="choice">
+    <input type="radio" name="lunchMenu" value="식사1">
+    <span class="choicebox" style="flex-direction:column; justify-content:center; text-align:center; gap:6px;">
+      <small class="category">식사</small>
+      <strong style="min-width:0; text-align:center;">빅맥세트</strong>
+    </span>
+  </label>
+
+  <label class="choice">
+    <input type="radio" name="lunchMenu" value="식사2">
+    <span class="choicebox" style="flex-direction:column; justify-content:center; text-align:center; gap:6px;">
+      <small class="category">식사</small>
+      <strong style="min-width:0; text-align:center;">맥스파이스치킨버거세트</strong>
+    </span>
+  </label>
+
+  <label class="choice">
+    <input type="radio" name="lunchMenu" value="간식">
+    <span class="choicebox" style="flex-direction:column; justify-content:center; text-align:center; gap:6px;">
+      <small class="category">간식</small>
+      <strong style="min-width:0; text-align:center;">과일모찌(망고)</strong>
+    </span>
+  </label>
+
+</div>
+
     </div>
     </div>
   </section>
